@@ -30,7 +30,7 @@
         <div class="platformTitle">便携导航</div>
         <el-row>
           <el-col :span="24" style="text-align: center;">
-            <el-button type="success" class="marginBottom marginTop"><a href="http://192.168.8.109:9900/#/SystemMonitor">进入智慧环控系统</a></el-button>
+            <el-button type="success" class="marginBottom marginTop" @click="toSystem">进入智慧环控系统</el-button>
             <el-button type="primary">进入智慧环控设备管理</el-button>
           </el-col>
         </el-row>
@@ -56,7 +56,17 @@
 
 <script>
   export default {
-    name: "board"
+    name: "board",
+    data(){
+      return{
+
+      }
+    },
+    methods:{
+      toSystem(){
+        window.location.href = "http://192.168.8.109:9900"
+      }
+    }
   }
 </script>
 
